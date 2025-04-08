@@ -69,37 +69,56 @@ export default function AboutPage() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    try {
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
 
-      const result = await response.json();
-      if (result.success) {
-        setIsSuccess(true);
-        // Clear the form fields
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-        alert("Message sent successfully!");
-      } else {
-        setError(result.error || "Failed to send message");
-        alert("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setError("An error occurred. Please try again.");
-      alert("An error occurred. Please try again.");
-    } finally {
+    // Validation checks
+    if (!formData.name.trim()) {
+        setError("Name is required.");
+        setIsSubmitting(false);
+        return;
+    }
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+        setError("A valid email is required.");
+        setIsSubmitting(false);
+        return;
+    }
+    if (!formData.message.trim()) {
+      setError("Message can't be empty.");
       setIsSubmitting(false);
+      return;
+  }
+
+    try {
+        const response = await fetch("/api/sendEmail", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            setIsSuccess(true);
+            // Clear the form fields
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+            });
+            alert("Message sent successfully!");
+        } else {
+            setError(result.error || "Failed to send message");
+            alert("Failed to send message. Please try again.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        setError("An error occurred. Please try again.");
+        alert("An error occurred. Please try again.");
+    } finally {
+        setIsSubmitting(false);
     }
   };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
