@@ -1,13 +1,13 @@
-"use client"
-import React from 'react';
-import { notFound } from "next/navigation"
-import Link from "next/link"
-import { ArrowLeft, CalendarIcon, Clock } from "lucide-react"
+"use client";
+import React from "react";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, CalendarIcon, Clock } from "lucide-react";
 
 interface BlogPostPageProps {
   params: {
-    id: string
-  }
+    id: string;
+  };
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
@@ -15,10 +15,109 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const { id } = resolvedParams;
 
   const posts = {
+    "oracle-interview-experience": {
+      title: "Oracle Application Developer Interview Experience",
+      date: "2025-04-13",
+      readingTime: "3 min read",
+      content: `
+    <p>Oracle’s Application Developer role presented a thrilling and challenging interview process. Coming from a Computer Science background at NIT Surat, I’ve honed my skills through various projects and an internship experience at JPMorgan Chase & Co. However, this interview process still proved both rigorous and enlightening.</p>
+    <br>
+    <h2>Pre-Interview Timeline</h2>
+    <p>I had my Online Assessment (OA) on <strong>August 1, 2024</strong>, and the results came out on August 2, announcing that I’d been shortlisted for the interviews on <strong>August 5</strong>. At that time, I was at home, so I had to rush to reach the campus on the night of August 4—just in time for the interviews on the next morning. It was hectic, but the anticipation of the process fueled my excitement. Little did I know, I would end up cracking it on my first day back on campus, which was an indescribably exhilarating feeling!</p>
+    <br>
+    <h2>Online Assessment (OA)</h2>
+    <p>The interview journey began with a 1.5-hour Online Assessment. It comprised 20 MCQs and 1 coding question. The coding challenge tested knowledge of the Disjoint Set Union (DSU) data structure. For those unacquainted with DSU, it would likely range from medium to hard difficulty, whereas anyone with DSU experience might find it more approachable.</p>
+    <br>
+    <p>From both the Computer Science and Electronics branches (ECE and CSE), around 95 students made it through this stage. It was clear that a solid foundation in data structures and algorithms played a key role in clearing the OA.</p>
+    <br>
+    <h2>Technical Interview Rounds</h2>
+    <p>There were three technical rounds in total. Across these rounds, I was tested on core CS fundamentals—Computer Networks, Object-Oriented Programming (OOP), and Data Structure & Algorithm (DSA) questions. Each round featured around three DSA problems of what I would consider LeetCode Medium-level difficulty.</p>
+    <br>
+    <h3>First Technical Round</h3>
+    <ul>
+      <li><strong>Question 1:</strong> Given page width and height, and a string, determine how many pages, lines, and columns are needed to accommodate the entire text. (A quirky question the interviewer concocted, testing problem-solving and logical thinking.)</li>
+      <li><strong>Question 2:</strong> Remove duplicates from an array.</li>
+      <li><strong>Question 3:</strong> Kadane’s algorithm to find the maximum subarray sum.</li>
+    </ul>
+    <br>
+    <h3>Second Technical Round</h3>
+    <ul>
+      <li><strong>Question 1:</strong> KMP algorithm for pattern searching.</li>
+      <li><strong>Question 2:</strong> Finding the GCD of an entire array. (Straightforward, though unusual in an interview context.)</li>
+      <li><strong>Question 3:</strong> SQL-based questions, covering joins, subqueries, and basic database design.</li>
+      <li><strong>Project Discussion:</strong> The interviewer asked about my projects—how they were structured, the technologies used, and the challenges encountered.</li>
+    </ul>
+    <br>
+    <h3>Third Technical Round</h3>
+    <p>This round proved less intense. Most questions revolved around my internship experience at JPMorgan Chase & Co. The interviewer seemed especially curious about the day-to-day work, the skills I practiced, and any notable takeaways. Then came one coding question:</p>
+    <p><strong>Question:</strong> Given two dates, account for all possible constraints and edge cases to determine the number of days between them. Although lengthy to implement correctly, it was quite straightforward once the approach was set.</p>
+    <br>
+    <h2>HR Interview</h2>
+    <p>The HR interview wrapped up the process in about five minutes. Typical questions came up:</p>
+    <ul>
+      <li><strong>Why should we select you?</strong></li>
+      <li><strong>Why do you want to join Oracle?</strong></li>
+      <li><strong>How do you differentiate between hard work and smart work?</strong></li>
+      <li><strong>Which approach do you rely on during exams?</strong></li>
+    </ul>
+    <br>
+    <p>For the “hard work vs. smart work” question, I shared that I rely on smart work for subjects I don’t enjoy—studying them the night before with targeted preparation. For subjects I genuinely like, I put in consistent hard work throughout the semester. That personal preference led to an interesting conversation on motivation and passion in tech.</p>
+    <br>
+    <h2>Final Thoughts</h2>
+    <p>The Oracle interview process tested fundamentals in OOP, DS, Computer Networks, and SQL, while also probing the thought process behind my project experiences. The entire journey—from the DSU-based coding challenge in the OA to nuanced HR questions about work ethic—offered a holistic evaluation of both technical depth and cultural fit.</p>
+    <br>
+    <p>All in all, it was a memorable series of interviews. I recommend strengthening your conceptual foundations and practicing medium-level DSA problems diligently. Having personal projects or internships on your resume (like my JPMorgan Chase & Co. experience) can spark excellent discussions and distinguish you in the interview process. And if you ever find yourself rushing back to campus at the last minute—well, sometimes that makes for the best stories!</p>
+  `,
+    },
+    "jpmc-internship-experience": {
+      title: "Summer Internship at JPMorgan Chase & Co.",
+      date: "2025-04-13",
+      readingTime: "5 min read",
+      content: `
+    <p>This past summer, I had the incredible opportunity to work on-site at JPMorgan Chase & Co. in Mumbai as a Software Engineering Intern. The experience was both professionally and personally enriching, offering deep insights into large-scale software solutions and a vibrant glimpse of city life in Mumbai.</p>
+    <br>
+    <h2>Project Overview</h2>
+    <br>
+    <p>I primarily contributed to a KYC chatbot aimed at assisting employees with application updates and usage queries. By integrating Large Language Models (LLMs) with Llama Index, we achieved a relevance score of over 80% for chatbot responses. The tech stack included:</p>
+    <br>
+    <ul>
+      <li><strong>Backend:</strong> Python for building and managing core functionalities.</li>
+      <li><strong>Frontend:</strong> React for a seamless, user-friendly interface.</li>
+      <li><strong>CI/CD:</strong> Jenkins for streamlined and automated deployment processes.</li>
+      <li><strong>Prompt Moderation:</strong> Nemo Guardrails to ensure relevant, secure conversations.</li>
+      <li><strong>User Feedback Mechanism:</strong> Enabled real-time feedback on chatbot responses to enhance performance.</li>
+    </ul>
+    <br>
+    <p>This integration of AI into customer-centric services reduced developer intervention by 70% and ticket resolution time by 80%. The impact was tangible, and it felt rewarding to see our work directly benefit both end users and internal teams.</p>
+<br>
+    <h2>On-Site Experience in Mumbai</h2>
+    <br>
+    <p>Being on-site in Mumbai added another dimension to my internship. The city is a whirlwind of energy and opportunity. Each day, I commuted through bustling streets, soaking in the culture and pace of life. The office environment at JPMorgan Chase & Co. was similarly dynamic—teams were always collaborating, experimenting, and problem-solving in real time.</p>
+<br>
+    <p>During weekends, I explored Mumbai’s iconic landmarks, from Marine Drive to the Gateway of India, savoring local street food and catching the sea breeze in the evenings. The city is well-known for its fast-paced lifestyle, and it was exhilarating to experience that firsthand while juggling a high-impact project at work.</p>
+<br>
+    <h2>Technical and Professional Learnings</h2>
+    <br>
+    <p>Working at JPMorgan Chase & Co. offered valuable lessons, including:</p>
+    <ul>
+      <li><strong>Large-Scale Systems:</strong> Gaining exposure to enterprise-level architecture and stringent security standards.</li>
+      <li><strong>Collaboration and Communication:</strong> Cross-team discussions were frequent and often necessary to ensure smooth delivery. Clear communication was key.</li>
+      <li><strong>CI/CD Best Practices:</strong> Automating code integration and deployment pipelines with Jenkins was a game-changer for efficiency.</li>
+      <li><strong>Agile Methodologies:</strong> Daily stand-ups, sprint planning, and iterative development processes ensured rapid progress and adaptability.</li>
+    </ul>
+    <br>
+    <h2>Reflections</h2>
+    <br>
+    <p>This internship reinforced how vital it is to blend technology expertise with effective teamwork and communication. The KYC chatbot project stood as a perfect example of modern AI integration in a financial setting, showcasing real value in cutting down mundane tasks and enhancing user experience.</p>
+<br>
+    <p>Overall, the summer at JPMorgan Chase & Co. was a defining period. The blend of hands-on technical work, exposure to high-level industry practices, and immersion in the vibrant Mumbai culture made it unforgettable. I left feeling more confident, motivated, and ready to tackle the next chapter of my career in software development.</p>
+  `,
+    },
+
     "future-of-ai": {
       title: "The Future of AI Development",
       date: "2025-02-15",
-      readingTime: "5 min read",
+      readingTime: "3 min read",
       content: `
         <p>Artificial Intelligence has come a long way since its inception. From rule-based systems to machine learning algorithms that can learn from data, the field has seen tremendous growth and innovation.</p>
         
@@ -51,7 +150,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     "web3-revolution": {
       title: "The Web3 Revolution",
       date: "2025-02-12",
-      readingTime: "7 min read",
+      readingTime: "2 min read",
       content: `
         <p>Web3 represents a paradigm shift in how we interact with the internet. Unlike Web2, which is dominated by centralized platforms that control user data and monetization, Web3 aims to create a more decentralized and user-centric internet.</p>
         
@@ -90,7 +189,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     "cybersecurity-tips": {
       title: "Essential Cybersecurity Tips for Developers",
       date: "2025-02-01",
-      readingTime: "6 min read",
+      readingTime: "3 min read",
       content: `
         <p>In today's interconnected world, cybersecurity is more important than ever. As developers, we have a responsibility to ensure that the applications we build are secure and protect user data. Here are some essential cybersecurity tips that every developer should follow.</p>
         
@@ -132,7 +231,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     "react-performance": {
       title: "Optimizing React Performance",
       date: "2025-01-25",
-      readingTime: "8 min read",
+      readingTime: "4 min read",
       content: `
         <p>React is known for its virtual DOM and efficient rendering, but as applications grow in complexity, performance can become an issue. Here are some advanced techniques to optimize the performance of your React applications.</p>
         
@@ -200,17 +299,20 @@ function MyComponent() {
         <p>By applying these techniques, you can significantly improve the performance of your React applications, providing a better user experience and reducing resource usage.</p>
       `,
     },
-  }
+  };
 
-  const post = posts[id as keyof typeof posts]
+  const post = posts[id as keyof typeof posts];
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   return (
     <div className="space-y-8 max-w-3xl mx-auto">
-      <Link href="/blog" className="inline-flex items-center gap-2 text-primary hover:underline">
+      <Link
+        href="/blog"
+        className="inline-flex items-center gap-2 text-primary hover:underline"
+      >
         <ArrowLeft size={16} /> Back to blog
       </Link>
 
@@ -238,6 +340,5 @@ function MyComponent() {
         />
       </article>
     </div>
-  )
+  );
 }
-

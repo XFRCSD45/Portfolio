@@ -3,6 +3,20 @@ import { BlogCard } from "@/components/blog-card"
 export default function BlogPage() {
   const posts = [
     {
+      id: "oracle-interview-experience",
+      title: "Oracle Application Developer Interview Experience",
+      excerpt: "Shared my experience of Orcale Applicaation Developer Interview which was on-campus opportunity.",
+      date: "2025-04-13",
+      readingTime: "3 min read",
+    },
+    {
+      id: "jpmc-internship-experience",
+      title: "Summer Internship at JPMorgan Chase & Co.",
+      excerpt: "Shared my experience of Software Engineering Internship at JPMorgan Chase & Co during summers of 2024.",
+      date: "2025-04-13",
+      readingTime: "3 min read",
+    },
+    {
       id: "future-of-ai",
       title: "The Future of AI Development",
       excerpt: "Exploring the ethical implications and technological advancements in artificial intelligence.",
