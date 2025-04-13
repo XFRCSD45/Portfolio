@@ -21,28 +21,28 @@ export default function BlogPage() {
       title: "The Future of AI Development",
       excerpt: "Exploring the ethical implications and technological advancements in artificial intelligence.",
       date: "2025-02-15",
-      readingTime: "5 min read",
+      readingTime: "3 min read",
     },
     {
       id: "web3-revolution",
       title: "The Web3 Revolution",
       excerpt: "How blockchain technology is changing the way we think about ownership and digital assets.",
       date: "2025-02-12",
-      readingTime: "7 min read",
+      readingTime: "3 min read",
     },
     {
       id: "cybersecurity-tips",
       title: "Essential Cybersecurity Tips for Developers",
       excerpt: "Practical security measures every developer should implement to protect their applications.",
       date: "2025-02-01",
-      readingTime: "6 min read",
+      readingTime: "2 min read",
     },
     {
       id: "react-performance",
       title: "Optimizing React Performance",
       excerpt: "Advanced techniques to improve the performance of your React applications.",
       date: "2025-01-25",
-      readingTime: "8 min read",
+      readingTime: "4 min read",
     },
   ]
 
