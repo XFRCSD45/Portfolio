@@ -16,10 +16,10 @@ export function Footer() {
               <Github size={20} />
               <span className="sr-only">GitHub</span>
             </Link>
-            <Link href="https://x.com/sleepy_devv" className="text-muted-foreground hover:text-primary transition-colors">
+            {/* <Link href="https://x.com/sleepy_devv" className="text-muted-foreground hover:text-primary transition-colors">
               <Twitter size={20} />
               <span className="sr-only">Twitter</span>
-            </Link>
+            </Link> */}
             <Link href="https://www.linkedin.com/in/sunny-das-1177641bb/" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin size={20} />
               <span className="sr-only">LinkedIn</span>

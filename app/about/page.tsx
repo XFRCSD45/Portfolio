@@ -322,7 +322,7 @@ export default function AboutPage() {
                         github.com/XFRCSD45
                       </Link>
                     </div>
-                    <div>
+                    {/* <div>
                       <p className="mb-1 text-primary">twitter0:</p>
                       <Link
                         href="https://x.com/sleepy_devv"
@@ -332,7 +332,7 @@ export default function AboutPage() {
                         <Twitter size={16} />
                         twitter.com/sleepy_devv
                       </Link>
-                    </div>
+                    </div> */}
                     <div>
                       <p className="mb-1 text-primary">linkedin0:</p>
                       <Link
