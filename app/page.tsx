@@ -38,7 +38,7 @@ export default function Home() {
     {
       id: "oracle-interview-experience",
       title: "Oracle Application Developer Interview Experience",
-      excerpt: "Shared my experience of Orcale Applicaation Developer Interview which was on-campus opportunity.",
+      excerpt: "Shared my experience of Oracle Application Developer Interview which was on-campus opportunity.",
       date: "2025-04-13",
       readingTime: "3 min read",
     },
