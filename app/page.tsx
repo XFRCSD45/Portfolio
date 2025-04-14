@@ -58,11 +58,11 @@ export default function Home() {
     <div className="space-y-16">
       <section className="py-12">
         <div className="flex flex-col justify-center items-center text-center" >
-      <Image src="/portfolio.png" height={400} width={400} alt="portfolio-ghibli" />
-      <div className="font-extrabold text-xl mt-2 mb-20 " >
-        <p>Sunny Das</p>
-        <p>NIT Surat CSE'25</p>
-        <p>Full Stack Developer</p>
+      <Image src="/portfolio.png" height={400} width={400} alt="portfolio-ghibli" className="rounded-full circle-card-hover" />
+      <div className="font-extrabold text-xl mt-5 mb-20 glitch cursor-default" >
+        <p className="glitch" data-text="Sunny Das">Sunny Das</p>
+        <p className="glitch" data-text="NIT Surat CSE'25">NIT Surat CSE'25</p>
+        <p className="glitch" data-text="Full Stack Developer">Full Stack Developer</p>
       </div>
       </div>
         <Terminal
