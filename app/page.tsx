@@ -6,6 +6,7 @@ import { Terminal } from "@/components/terminal"
 import { ProjectCard } from "@/components/project-card"
 import { BlogCard } from "@/components/blog-card"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export default function Home() {
   const [introComplete, setIntroComplete] = useState(false)
@@ -56,13 +57,20 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <section className="py-12">
+        <div className="flex flex-col justify-center items-center text-center" >
+      <Image src="/portfolio.png" height={400} width={400} alt="portfolio-ghibli" />
+      <div className="font-extrabold text-xl mt-2 mb-20 " >
+        <p>Sunny Das</p>
+        <p>NIT Surat CSE'25</p>
+        <p>Full Stack Developer</p>
+      </div>
+      </div>
         <Terminal
-          text="Hello, World. I am Sunny Das. Full-Stack developer and Competitive Programmer. Welcome to my digital realm."
+          text="Hello, World. I am Sunny Das. Upcoming Application Developer at Oracle. Welcome to my digital realm."
           typingSpeed={40}
           className="max-w-3xl mx-auto"
           onComplete={() => setIntroComplete(true)}
         />
-
         {introComplete && (
           <div className="mt-8 flex justify-center">
             <Link
