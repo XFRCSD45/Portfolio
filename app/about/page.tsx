@@ -44,6 +44,30 @@ export default function AboutPage() {
     },
   ];
 
+  const educations = [
+    {
+      degree: "B.Tech",
+      field: "Computer Science and Engineering",
+      school: "Sardar Vallabhbhai National Institute of Technology, Surat",
+      period: "Dec 2021 - Present",
+      grade:"8.75 CGPA",
+    },
+    {
+      degree: "Intermediate",
+      field: "Computer Science",
+      school: "Krishna Foundation Academy, Kanpur",
+      period: "2018 - 2020",
+      grade:"97.25 %",
+    },
+    {
+      degree: "High School",
+      field: "Computer Science",
+      school: "Krishna Foundation Academy, Kanpur",
+      period: "2016 - 2018",
+      grade:"95.20 %",
+    },
+  ];
+
   const skills = [
     {
       category: "Languages",
@@ -183,6 +207,48 @@ export default function AboutPage() {
                       <p>
                         <span className="text-primary">description:</span>{" "}
                         {exp.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-6">Education Timeline</h2>
+            <div className="space-y-6">
+              {educations.map((exp, index) => (
+                <div key={index} className="terminal-window">
+                  <div className="terminal-header">
+                    <div className="terminal-button terminal-button-red"></div>
+                    <div className="terminal-button terminal-button-yellow"></div>
+                    <div className="terminal-button terminal-button-green"></div>
+                    <div className="terminal-title">{exp.degree}.sh</div>
+                  </div>
+                  <div className="terminal-content">
+                    <p className="mb-1">
+                      <span className="text-primary">$</span> cat
+                      education_details.txt
+                    </p>
+                    <div className="mb-2">
+                      <p>
+                        <span className="text-primary">school:</span>{" "}
+                        {exp.school}
+                      </p>
+                      <p>
+                        <span className="text-primary">degree:</span> {exp.degree}
+                      </p>
+                      <p>
+                        <span className="text-primary">field:</span> {exp.field}
+                      </p>
+                      <p>
+                        <span className="text-primary">duration:</span>{" "}
+                        {exp.period}
+                      </p>
+                      <p>
+                        <span className="text-primary">grade:</span>{" "}
+                        {exp.grade}
                       </p>
                     </div>
                   </div>
