@@ -26,7 +26,7 @@ export default function AboutPage() {
       company: "Oracle",
       period: "Upcoming July 2025",
       description:
-        "Upcoming Apllication Developer at Oracle India. Looking forward for this great opportunity.",
+        "Upcoming Application Developer at Oracle India. Looking forward for this great opportunity.",
     },
     {
       title: "Software Development Intern",
