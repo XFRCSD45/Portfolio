@@ -66,7 +66,7 @@ export default function Home() {
       </div>
       </div>
         <Terminal
-          text="Hello, World. I am Sunny Das. Upcoming Application Developer at Oracle. Welcome to my digital realm."
+          text="Hello, World. I am Sunny Das. Application Software Engineer II at Oracle. Welcome to my digital realm."
           typingSpeed={40}
           className="max-w-3xl mx-auto"
           onComplete={() => setIntroComplete(true)}
