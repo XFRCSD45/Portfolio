@@ -22,16 +22,16 @@ export default function AboutPage() {
 
   const experiences = [
     {
-      title: "Application Developer",
+      title: "Application Software Engineer II",
       company: "Oracle",
-      period: "Upcoming July 2025",
+      period: "July 2025 - Present",
       description:
-        "Upcoming Application Developer at Oracle India. Looking forward for this great opportunity.",
+        "Application Software Engineer II at Oracle, working on developing and maintaining enterprise software solutions. Involved in full-stack development, performance optimization, and implementing new features. Primary tech stack includes Java, ADF, VBCS, Javascript, Typescript, React and Oracle Database.",
     },
     {
       title: "Software Development Intern",
       company: "Ignis Tech  Solutions",
-      period: "Dec 2024 - Present",
+      period: "Dec 2024 - July 2025",
       description:
         "Developing  web applications using React, Django REST Framework, and MsSql. Implemented CI/CD pipelines and automated testing. Working on Web Scrapping using Scrapy and Selenium.",
     },
@@ -49,7 +49,7 @@ export default function AboutPage() {
       degree: "B.Tech",
       field: "Computer Science and Engineering",
       school: "Sardar Vallabhbhai National Institute of Technology, Surat",
-      period: "Dec 2021 - Present",
+      period: "Dec 2021 - May 2025",
       grade:"8.75 CGPA",
     },
     {
@@ -165,7 +165,7 @@ export default function AboutPage() {
 
         {introComplete && (
           <Terminal
-            text="Hello, I'm Sunny Das. A full-stack developer with a passion for Software Development, Competitive Programming, and creating immersive digital experiences. I specialize in building modern web applications with a focus on performance, accessibility, and user experience."
+            text="Hello, I'm Sunny Das. Software Engineer with a passion for full stack Software Development, Competitive Programming, and creating immersive digital experiences. I specialize in building modern web applications with a focus on performance, accessibility, and user experience."
             typingSpeed={20}
             className="max-w-3xl mx-auto mt-4"
             showPrompt={false}
