@@ -61,8 +61,8 @@ export default function Home() {
       <Image src="/portfolio.png" height={400} width={400} alt="portfolio-ghibli" className="rounded-full circle-card-hover" />
       <div className="font-extrabold text-xl mt-5 mb-20 glitch cursor-default" >
         <p className="glitch" data-text="Sunny Das">Sunny Das</p>
-        <p className="glitch" data-text="NIT Surat CSE'25">NIT Surat CSE'25</p>
-        <p className="glitch" data-text="Full Stack Developer">Full Stack Developer</p>
+        <p className="glitch" data-text="NIT Surat CSE'25">Oracle</p>
+        <p className="glitch" data-text="Full Stack Developer">Software Engineer</p>
       </div>
       </div>
         <Terminal
